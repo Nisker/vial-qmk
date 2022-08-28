@@ -39,9 +39,13 @@
 /* key matrix size */
 #define MATRIX_ROWS 14
 #define MATRIX_COLS 6
+#define DYNAMIC_KEYMAP_LAYER_COUNT 8
 
 #define LED_CAPS_LOCK_PIN C13
 #define LED_PIN_ON_STATE 0
+
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
 
 //No-Go pins: A8, A9, A11, A12, B2
 //Maybe not A9. A10 needs to be pulled high, else it wont program.
@@ -89,6 +93,18 @@
 #define AUDIO_CLICKY_FREQ_MAX 9500.0f
 #define AUDIO_CLICKY_FREQ_RANDOMNESS 0.05f
 #endif  
+
+// Mouse key speed and acceleration.
+#undef MOUSEKEY_DELAY
+#define MOUSEKEY_DELAY          0
+#undef MOUSEKEY_INTERVAL
+#define MOUSEKEY_INTERVAL       16
+#undef MOUSEKEY_WHEEL_DELAY
+#define MOUSEKEY_WHEEL_DELAY    0
+#undef MOUSEKEY_MAX_SPEED
+#define MOUSEKEY_MAX_SPEED      6
+#undef MOUSEKEY_TIME_TO_MAX
+#define MOUSEKEY_TIME_TO_MAX    64
 
 //Space cadet 
 /*
